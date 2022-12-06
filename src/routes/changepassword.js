@@ -8,6 +8,7 @@ const TABLE_NAME = process.env.TABLE_NAME
 // It's necessary for take input succesfully with express.
 router.use(express.json())
 
+// HTTP Method is Patch because we want to update a portion of the resource.
 router.patch("/", (req, res) => {
     const { body: data } = req
 
